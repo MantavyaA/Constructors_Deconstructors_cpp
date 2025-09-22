@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class date {
+public:
+    int d, m, y;
+
+    date(int dd=26, int mm=12, int yy=2022) {
+        d = dd;
+        m = mm;
+        y = yy;
+        cout << "Constructor called for " << d << "/" << m << "/" << y << endl;
+    }
+
+    ~date() {
+        cout << "Destructor called for " << d << "/" << m << "/" << y << endl;
+    }
+};
+
+int main() {
+    date d1, d2, d3, d4;  
+
+    cout << "\nNow creating dates inside loop:\n";
+    for(int i=0; i<4; i++) {
+        date temp(1+i, 1, 2025);  
+    } 
+
+    cout << "\nEnd of program\n";
+    return 0;
+}
+
+
+//Expected Output
+
+Constructor called for 26/12/2022
+Constructor called for 26/12/2022
+Constructor called for 26/12/2022
+Constructor called for 26/12/2022
+
+Now creating dates inside loop:
+Constructor called for 1/1/2025
+Destructor called for 1/1/2025
+Constructor called for 2/1/2025
+Destructor called for 2/1/2025
+Constructor called for 3/1/2025
+Destructor called for 3/1/2025
+Constructor called for 4/1/2025
+Destructor called for 4/1/2025
+
+End of program
+Destructor called for 26/12/2022
+Destructor called for 26/12/2022
+Destructor called for 26/12/2022
+Destructor called for 26/12/2022
+
+
