@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Date {
+    int day, month, year;
+
+public:
+    Date(int d, int m, int y) {
+        day = d;
+        month = m;
+        year = y;
+    }
+
+    void display() {
+        cout << "Future Date: " << day << "/" << month << "/" << year << endl;
+    }
+};
+
+int main() {
+    Date future(15, 8, 2030);  
+    future.display();
+
+    return 0;
+}
+
+
+
+//Expected Output
+
+Future Date: 15/8/2030
