@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+
+class Monster {
+    string flavour;
+    int caffeine; 
+    int sugar;    
+
+public:
+   
+    Monster() {
+        flavour = "Original";
+        caffeine = 160;
+        sugar = 54;
+    }
+
+    
+    Monster(string f) {
+        flavour = f;
+        caffeine = 160;
+        sugar = 54;
+    }
+
+    
+    Monster(string f, int c) {
+        flavour = f;
+        caffeine = c;
+        sugar = 0;
+    }
+
+    
+    Monster(string f, int c, int s) {
+        flavour = f;
+        caffeine = c;
+        sugar = s;
+    }
+
+    void display() {
+        cout << "Flavour: " << flavour << endl;
+        cout << "Caffeine: " << caffeine << "mg" << endl;
+        cout << "Sugar: " << sugar << "g" << endl;
+        cout << endl;
+    }
+};
+
+int main() {
+
+    cout << endl;
+    cout << "WELCOME TO THE MONSTER MULTIVERSE" << endl;
+    cout << endl;
+    
+
+    Monster d1;       //def
+    d1.display();
+
+    
+    Monster d2("Ultra Peach");           //flavour
+    d2.display();
+
+    
+    Monster d3("White", 140);           // flav+caff
+    d3.display();
+
+   
+    Monster d4("Aussie lemonade", 150, 45);        //all
+    d4.display();
+
+    return 0;
+}
+
+
+
+
+expected output:
+
+WELCOME TO THE MONSTER MULTIVERSE
+
+Flavour: Original
+Caffeine: 160mg
+Sugar: 54g
+
+Flavour: Ultra Peach
+Caffeine: 160mg
+Sugar: 54g
+
+Flavour: White
+Caffeine: 140mg
+Sugar: 0g
+
+Flavour: Aussie lemonade
+Caffeine: 150mg
+Sugar: 45g
