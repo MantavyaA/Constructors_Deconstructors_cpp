@@ -27,7 +27,7 @@ A **constructor** in C++ is a special member function that is automatically exec
 ### 3. Copy Constructor
 - Creates a **new object** as a copy of an existing object.
 - **Syntax:**
-```cpp
+  
 ClassName(const ClassName &obj) { 
     // copy member variables from obj
 }
