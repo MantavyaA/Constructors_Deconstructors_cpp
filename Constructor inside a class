@@ -11,14 +11,14 @@ class Employee {
 public:
     void getData() {
         cout << "Enter Employee Name: ";
-        cin.ignore();
+        
         getline(cin, name);
 
         cout << "Enter Employee ID: ";
         cin >> empID;
 
         cout << "Enter Department: ";
-        cin.ignore();
+   
         getline(cin, department);
 
         cout << "Enter Position: ";
