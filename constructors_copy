@@ -59,39 +59,6 @@ int main() {
 
 
 
-#include <iostream>
-using namespace std;
-
-int objcount = 0;
-
-class destruct {
-public:
-    destruct() {
-        objcount++;
-        cout << "No. of objects created: " << objcount << endl;
-    }
-
-    ~destruct() {
-        objcount--; 
-        cout << "No. of objects destroyed: " << objcount << endl;
-    }
-};
-
-int main() {
-    cout << "Program Start" << endl;
-    cout << endl;
-
-    destruct d1, d2, d3, d4, d5,d6;  
-
-    cout << endl;
-    cout << "Program End" << endl;
-    cout << endl;
-    return 0;
-}
-
-
-
-
 //Expected Output
 
 Before Copying 
